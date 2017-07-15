@@ -22,16 +22,19 @@ function initializeFPS() {
     imageScaleModifier = 1;
 }*/
 function initializePlayer() {
-    var lynxOfElDorado = new wrestler();
+    lynxOfElDorado = new wrestler();
 }
 
 function initializeBoss() {
-    var bjSmirkins = new wrestler();
+    bjSmirkins = new wrestler();
     bjSmirkins.width = 3 * widthUnitOfMeasure;
     bjSmirkins.height = 2.5 * heightUnitOfMeasure;
 }
 function initializeMiniboss1(){
-    var kevTardy = new wrestler();
+    kevTardy = new wrestler();
+}
+function initializeMiniboss2(){
+    patTardy = new wrestler();
 }
 function initializeEverything() {
     // console.log('Called initializeEverything()');  // DEBUG
@@ -44,12 +47,13 @@ function initializeEverything() {
     initializePlayer();
     initializeUnitsOfMeasure();
     initializeBoss();
-    initializeMiniBoss1();
+    initializeMiniboss1();
+    initializeMiniboss2();
 
     // console.log('initializeEverything() completed');  // DEBUG
 
 }
 function initializeUnitsOfMeasure(){
-    var widthUnitOfMeasure = lynxOfElDorado.width;
-    var heightUnitOfMeasure = lynxOfElDorado.height;
+    widthUnitOfMeasure = lynxOfElDorado.width;
+    heightUnitOfMeasure = lynxOfElDorado.height;
 }

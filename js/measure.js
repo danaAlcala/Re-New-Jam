@@ -1,0 +1,2 @@
+var widthUnitOfMeasure;
+var heightUnitOfMeasure;

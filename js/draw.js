@@ -6,7 +6,10 @@ function drawCanvas() {
 
     canvasContext.fillStyle = canvasBGColor; // "fillStyle Sets or returns the color, gradient, or pattern used to fill the drawing." from w3schools.com
     canvasContext.fillRect(0, 0, canvas.width, canvas.height); // Doesn't fill an existing rectangle, but instead creates a filled rectangle.
-
+    drawCanvasCalled = true; // debug
+    if (!drawPlayerCalled){
+        drawCanvasCalledFirst = true;
+    } // debug
     // console.log('drawCanvas() complete');  // DEBUG
 }
 function drawRect(color, x, y, width, height) {
@@ -19,9 +22,9 @@ function drawRect(color, x, y, width, height) {
 }
 function drawEverything() {
     drawCanvas();
-    drawPlayer('white', canvas.width / 2 - lynxOfElDorado.width / 2,
-                canvas.height / 2 - lynxOfElDorado.height / 2,
-                lynxOfElDorado.width, lynxOfElDorado.height);
+    drawPlayer('white',
+                lynxOfElDorado.width,
+                lynxOfElDorado.height);
 }
 function drawCircle(color, x, y, radius) {
     // console.log('Called drawCircle()');  // DEBUG
@@ -38,6 +41,25 @@ function drawText(color, text, x, y) {
     canvasContext.fillStyle = color;
     canvasContext.fillText(text, x, y);
 }
-function drawPlayer(color, x, y, width, height){
-    drawRect(color, x, y, width, height);
+function drawPlayer(color,
+                    width,
+                    height){
+    drawRect(color,
+             lynxOfElDorado.xPosition,
+             lynxOfElDorado.yPosition,
+             width,
+             height);
+    drawPlayerCalled = true; // debug
+    if (!drawCanvasCalled){
+        drawPlayerCalledFirst = true;
+    } // debug
+}
+function drawBoss(color,
+                  width, 
+                  height){
+    drawRect(color,
+             bjSmirkins.xPosition,
+             bjSmirkins.yPosition,
+             width,
+             height);
 }

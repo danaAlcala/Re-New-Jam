@@ -2,7 +2,10 @@ function randomNumber(start, end) {
     return Math.floor((Math.random() * end) + start);
 }
 function moveEverything() {
-    return true;
+    lynxOfElDorado.xPosition = canvas.width / 16;
+    lynxOfElDorado.yPosition = (canvas.width / 16) * 15;
+    bjSmirkins.xPosition = canvas.width / 16;
+    bjSmirkins.yPosition = canvas.height / 16;
 }
 //GameLoop
 function updateAll() {

@@ -16,4 +16,6 @@ function wrestler(){
     this.isJumping = false;
     this.isRunning = false;
     this.direction = 'right';
+    this.xPosition;
+    this.yPosition;
 }
