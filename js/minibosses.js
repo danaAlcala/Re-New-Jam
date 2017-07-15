@@ -4,4 +4,4 @@
 
 
 var kevTardy;
-var patTardy;
+var bradTardy;

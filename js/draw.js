@@ -20,11 +20,32 @@ function drawRect(color, x, y, width, height) {
 
     // console.log('drawRect() complete');  // DEBUG
 }
+function drawPlayer(){
+    drawRect(lynxOfElDorado.color,
+             lynxOfElDorado.xPosition,
+             lynxOfElDorado.yPosition,
+             lynxOfElDorado.width,
+             lynxOfElDorado.height);
+    drawPlayerCalled = true; // debug
+    if (!drawCanvasCalled){
+        drawPlayerCalledFirst = true;
+    } // debug
+}
+function drawBoss(){
+    drawRect(bjSmirkins.color,
+             bjSmirkins.xPosition,
+             bjSmirkins.yPosition,
+             bjSmirkins.width,
+             bjSmirkins.height);
+    drawBossCalled = true; // debug
+    if (!drawCanvasCalled){
+        drawBossCalledFirst = true;
+    } // debug
+}
 function drawEverything() {
     drawCanvas();
-    drawPlayer('white',
-                lynxOfElDorado.width,
-                lynxOfElDorado.height);
+    drawPlayer();
+    drawBoss();
 }
 function drawCircle(color, x, y, radius) {
     // console.log('Called drawCircle()');  // DEBUG
@@ -40,26 +61,4 @@ function drawCircle(color, x, y, radius) {
 function drawText(color, text, x, y) {
     canvasContext.fillStyle = color;
     canvasContext.fillText(text, x, y);
-}
-function drawPlayer(color,
-                    width,
-                    height){
-    drawRect(color,
-             lynxOfElDorado.xPosition,
-             lynxOfElDorado.yPosition,
-             width,
-             height);
-    drawPlayerCalled = true; // debug
-    if (!drawCanvasCalled){
-        drawPlayerCalledFirst = true;
-    } // debug
-}
-function drawBoss(color,
-                  width, 
-                  height){
-    drawRect(color,
-             bjSmirkins.xPosition,
-             bjSmirkins.yPosition,
-             width,
-             height);
 }

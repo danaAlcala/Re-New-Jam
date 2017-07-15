@@ -22,19 +22,21 @@ function initializeFPS() {
     imageScaleModifier = 1;
 }*/
 function initializePlayer() {
-    lynxOfElDorado = new wrestler();
+    lynxOfElDorado = new wrestler('white');
 }
 
 function initializeBoss() {
-    bjSmirkins = new wrestler();
+    bjSmirkins = new wrestler('red');
     bjSmirkins.width = 3 * widthUnitOfMeasure;
     bjSmirkins.height = 2.5 * heightUnitOfMeasure;
+    bjSmirkins.xPosition = widthUnitOfMeasure;
+    bjSmirkins.yPosition = heightUnitOfMeasure;
 }
 function initializeMiniboss1(){
-    kevTardy = new wrestler();
+    kevTardy = new wrestler('green');
 }
 function initializeMiniboss2(){
-    patTardy = new wrestler();
+    bradTardy = new wrestler('blue');
 }
 function initializeEverything() {
     // console.log('Called initializeEverything()');  // DEBUG
@@ -46,6 +48,7 @@ function initializeEverything() {
     initInput();
     initializePlayer();
     initializeUnitsOfMeasure();
+    initializePlayerPosition();
     initializeBoss();
     initializeMiniboss1();
     initializeMiniboss2();
@@ -56,4 +59,8 @@ function initializeEverything() {
 function initializeUnitsOfMeasure(){
     widthUnitOfMeasure = lynxOfElDorado.width;
     heightUnitOfMeasure = lynxOfElDorado.height;
+}
+function initializePlayerPosition(){
+    lynxOfElDorado.xPosition = widthUnitOfMeasure;
+    lynxOfElDorado.yPosition = 14 * heightUnitOfMeasure;
 }
