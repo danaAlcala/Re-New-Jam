@@ -2,7 +2,12 @@ function randomNumber(start, end) {
     return Math.floor((Math.random() * end) + start);
 }
 function moveEverything() {
-    return;
+    if (holdRight){
+        lynxOfElDorado.xPosition+=lynxOfElDorado.runSpeed;
+    }
+    if (holdLeft){
+        lynxOfElDorado.xPosition-=lynxOfElDorado.runSpeed;
+    }
 }
 //GameLoop
 function updateAll() {

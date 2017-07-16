@@ -62,3 +62,118 @@ function drawText(color, text, x, y) {
     canvasContext.fillStyle = color;
     canvasContext.fillText(text, x, y);
 }
+function drawLevel(){
+    for (i = 0; i<=(areaOfLevelInUnits - 1); i++){
+        if (i == 1 || i % 17 == 0) {
+            floor.xPosition = 1;
+        }
+        else if (i == 2 || i % 18 == 0) {
+            floor.xPosition = 2;
+        }
+        else if (i == 3 || i % 19 == 0) {
+            floor.xPosition = 3;
+        }
+        else if (i == 4 || i % 20 == 0) {
+            floor.xPosition = 4;
+        }
+        else if (i == 5 || i % 21 == 0) {
+            floor.xPosition = 5;
+        }
+        else if (i == 6 || i % 22 == 0) {
+            floor.xPosition = 6;
+        }
+        else if (i == 7 || i % 23 == 0) {
+            floor.xPosition = 7;
+        }
+        else if (i == 8 || i % 24 == 0) {
+            floor.xPosition = 8;
+        }
+        else if (i == 9 || i % 25 == 0) {
+            floor.xPosition = 9;
+        }
+        else if (i == 10 || i % 26 == 0) {
+            floor.xPosition = 10;
+        }
+        else if (i == 11 || i % 27 == 0) {
+            floor.xPosition = 11;
+        }
+        else if (i == 12 || i % 28 == 0) {
+            floor.xPosition = 12;
+        }
+        else if (i == 13 || i % 29 == 0) {
+            floor.xPosition = 13;
+        }
+        else if (i == 14 || i % 30 == 0) {
+            floor.xPosition = 14;
+        }
+        else if (i == 15 || i % 31 == 0) {
+            floor.xPosition = 15;
+        }
+        else {
+            floor.xPosition = 0;
+        }
+        //Check Y Position
+        if (i > 15 && i < 32) {
+            floor.yPosition = 1;
+        }
+        else if (i > 31 && i < 48) {
+            floor.yPosition = 2;
+        }
+        else if (i > 47 && i < 64) {
+            floor.yPosition = 3;
+        }
+        else if (i > 63 && i < 80) {
+            floor.yPosition = 4;
+        }
+        else if (i > 79 && i < 96) {
+            floor.yPosition = 5;
+        }
+        else if (i > 95 && i < 112) {
+            floor.yPosition = 6;
+        }
+        else if (i > 111 && i < 128) {
+            floor.yPosition = 7;
+        }
+        else if (i > 127 && i < 144) {
+            floor.yPosition = 8;
+        }
+        else if (i > 143 && i < 160) {
+            floor.yPosition = 9;
+        }
+        else if (i > 159 && i < 176) {
+            floor.yPosition = 10;
+        }
+        else if (i > 175 && i < 192) {
+            floor.yPosition = 11;
+        }
+        else if (i > 191 && i < 208) {
+            floor.yPosition = 12;
+        }
+        else if (i > 209 && i < 224) {
+            floor.yPosition = 13;
+        }
+        else if (i > 223 && i < 240) {
+            floor.yPosition = 14;
+        }
+        else if (i > 239) {
+            floor.yPosition = 15;
+        }
+        else {
+            floor.yPosition = 0;
+        }
+        switch (checkLevelTile(level[i])){
+            case "straight":
+                floor.angle = 0;
+                
+                break;
+            case "upAngle":
+                floor.angle = 349;
+                break;
+            case "downAngle":
+                floor.angle = 11;
+                break;
+            default:
+                return;
+        }
+    }
+}

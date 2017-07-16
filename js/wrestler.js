@@ -11,7 +11,7 @@ function wrestler(color){
     this.width = canvas.width / 16;
     this.height = canvas.height / 16;
     this.jumpSpeed = 1;
-    this.runSpeed = 1;
+    this.runSpeed = 10;
     this.isGrappling = false;
     this.isJumping = false;
     this.isRunning = false;
@@ -19,4 +19,5 @@ function wrestler(color){
     this.xPosition;
     this.yPosition;
     this.color = color;
+    this.isOnPlatform;
 }

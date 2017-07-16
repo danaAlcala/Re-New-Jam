@@ -1,3 +1,10 @@
+// Keyboard Handling
+		var holdLeft = false;
+		var holdRight = false;
+		var holdUp = false;
+		var holdDown = false;
+		var unHold = false;
+
 function setKeyHoldState(thisKey, setTo) {
     if (thisKey == KEY_LEFT_ARROW) {
         holdLeft = setTo;

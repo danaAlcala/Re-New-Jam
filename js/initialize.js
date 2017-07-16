@@ -38,6 +38,21 @@ function initializeMiniboss1(){
 function initializeMiniboss2(){
     bradTardy = new wrestler('blue');
 }
+function initializePlatforms(){
+    // Type of platforms
+    // 0 - Empty
+    // 1 - Straight
+    // 2 - Angled up from left to right
+    // 3 - Angled down from left to right
+    areaOfLevelInUnits = (canvas.width / widthUnitOfMeasure) * (canvas.height / heightUnitOfMeasure);//256
+    clearAllPlatforms();
+    populatePlatforms();
+    floor = new platform();
+    floor.width = widthUnitOfMeasure;
+    floor.height = heightUnitOfMeasure / 2;
+    floor.xPosition = 0;
+    floor.yPosition = 0;
+}
 function initializeEverything() {
     // console.log('Called initializeEverything()');  // DEBUG
 
@@ -52,6 +67,7 @@ function initializeEverything() {
     initializeBoss();
     initializeMiniboss1();
     initializeMiniboss2();
+    initializePlatforms();
 
     // console.log('initializeEverything() completed');  // DEBUG
 
