@@ -42,7 +42,7 @@ function populatePlatforms(){
     level = [
         //  0,1,2,3,4,      5,6,7,8,9        11, 13,       15
         //                                 10, 12, 14,
-            0,0,0,0,0,      0,0,0,0,0,      0,0,0,0,0,      0,
+            0,0,0,0,0,      2,0,0,0,0,      0,0,0,0,0,      0,
             0,0,0,0,0,      0,0,0,0,0,      0,0,0,0,0,      0,
             0,0,0,0,0,      0,0,0,0,0,      0,0,0,0,0,      0,
             0,0,0,0,0,      0,0,0,0,0,      0,0,0,0,0,      0,
@@ -59,16 +59,22 @@ function populatePlatforms(){
             0,0,0,0,0,      0,0,0,0,0,      0,0,0,0,0,      0,
             0,0,0,0,0,      0,0,0,0,0,      0,0,0,0,0,      0,
             ];
+    populatePlatformsCalled = true;
 }
 function checkLevelTile(index){
+    checkLevelTileCalled = true;
     switch (level[index]){
         case 1:
+            // DEBUG console.log('straight');
             return "straight";
         case 2:
+            // DEBUG console.log('upAngle');
             return "upAngle";
         case 3:
+            // DEBUG console.log('downAngle');
             return "downAngle";
         default:
+            // DEBUG console.log('empty');
             return "empty";
     }
 }

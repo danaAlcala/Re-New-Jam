@@ -7,6 +7,9 @@ var drawBossCalledFirst = false;
 var drawStraightPlatformCalled = false;
 var drawUpAnglePlatformCalled = false;
 var drawDownAnglePlatformCalled = false;
+var populatePlatformsCalled = false;
+var checkLevelTileCalled = false;
+var drawLevelCalled = false;
 
 function debug(){
     
@@ -25,9 +28,9 @@ function debug(){
     //console.log('drawCanvasCalledFirst:' + drawCanvasCalledFirst);
     //console.log('drawPlayerCalledFirst:' + drawPlayerCalledFirst);
     //console.log('drawBossCalledFirst:' + drawBossCalledFirst);
-    console.log('drawStraightPlatformCalled: ' + drawStraightPlatformCalled);
-    console.log('drawUpAnglePlatformCalled: '+ drawUpAnglePlatformCalled);
-    console.log('drawDownAnglePlatformCalled: '+ drawDownAnglePlatformCalled);
+    //console.log('drawStraightPlatformCalled: ' + drawStraightPlatformCalled);
+    //console.log('drawUpAnglePlatformCalled: '+ drawUpAnglePlatformCalled);
+    //console.log('drawDownAnglePlatformCalled: '+ drawDownAnglePlatformCalled);
 
     // Boss Debug
     //console.log("BJ's height: " + bjSmirkins.height);
@@ -42,9 +45,17 @@ function debug(){
     //console.log("Brad's height: " + bradTardy.height);
     //console.log("Brad's width: " + bradTardy.width);
 
-    //Units of Measure
-    console.log("Width Unit of Measure: " + widthUnitOfMeasure);
-    console.log("Height Unit of Measure: " + heightUnitOfMeasure);
+    // Units of Measure Debug
+    //console.log("Width Unit of Measure: " + widthUnitOfMeasure);
+    //console.log("Height Unit of Measure: " + heightUnitOfMeasure);
+
+    // Platforms / Level Debug
+    //console.log("populatePlatformsCalled: " + populatePlatformsCalled);
+    //console.log("(0,0): "+ level[0]);
+    //console.log("checkLevelTileCalled: " + checkLevelTileCalled);
+    //console.log("drawLevelCalled: " + drawLevelCalled);
+    console.log("Floor Angle: " + floor.angle);
+
     
     
     

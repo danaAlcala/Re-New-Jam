@@ -46,6 +46,7 @@ function drawEverything() {
     drawCanvas();
     drawPlayer();
     drawBoss();
+    drawLevel();
 }
 function drawCircle(color, x, y, radius) {
     // console.log('Called drawCircle()');  // DEBUG
@@ -63,7 +64,9 @@ function drawText(color, text, x, y) {
     canvasContext.fillText(text, x, y);
 }
 function drawLevel(){
-    for (i = 0; i<=(areaOfLevelInUnits - 1); i++){
+    for (i = 0; i<=areaOfLevelInUnits - 1; i++){
+        console.log(i);
+        console.log(areaOfLevelInUnits);
         if (i == 1 || i % 17 == 0) {
             floor.xPosition = 1;
         }
@@ -161,19 +164,23 @@ function drawLevel(){
         else {
             floor.yPosition = 0;
         }
-        switch (checkLevelTile(level[i])){
+        switch (checkLevelTile(i)){
             case "straight":
                 floor.angle = 0;
-                
+                drawStraightPlatformCalled = true;
                 break;
             case "upAngle":
                 floor.angle = 349;
+                drawUpAnglePlatformCalled = true;
                 break;
             case "downAngle":
                 floor.angle = 11;
+                drawDownAnglePlatformCalled = true;
                 break;
             default:
+                floor.angle = null;
                 return;
         }
+        drawLevelCalled = true;
     }
 }
